@@ -55,26 +55,33 @@ body{
     cursor:pointer;
 }
 
-.tasklist{
-    margin-top:25px;
-}
 
-.task-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:white;
-    padding:10px;
-    margin-top:15px;
-    border-radius:10px;
-}
+
 
 .task-item li{
     list-style:none;
     color:black;
 }
 
-.delete-btn{
-    width:25px;
+
+.tasklist{
+    margin-top:20px;
+    padding:0;
+}
+
+.task-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    list-style:none;
+    background:white;
+    padding:10px 15px;
+    margin:15px 20px;
+    border-radius:10px;
+}
+
+.delete-icon{
+    width:30px !important;
+    height:30px;
     cursor:pointer;
 }

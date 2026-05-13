@@ -10,30 +10,29 @@ function addnewtask() {
         return;
     }
 
-    // Create task container
-    let taskItem = document.createElement("div");
-    taskItem.classList.add("task-item");
-
-    // Create li
+    // create li
     let li = document.createElement("li");
-    li.innerText = inp_val;
+    li.classList.add("task-item");
 
-    // Create delete image
-    let img2 = document.createElement("img");
-    img2.src = "cross_icon.png";
-    img2.classList.add("delete-btn");
+    // task text
+    let span = document.createElement("span");
+    span.innerText = inp_val;
 
-    // Append elements
-    taskItem.appendChild(li);
-    taskItem.appendChild(img2);
+    // delete image
+    let img = document.createElement("img");
+    img.src = "./cross_icon.png";
+    img.classList.add("delete-icon");
 
-    ul.appendChild(taskItem);
+    // append
+    li.appendChild(span);
+    li.appendChild(img);
 
-    // Clear input
+    ul.appendChild(li);
+
     input.value = "";
 
-    // Delete task
-    img2.onclick = function () {
-        taskItem.remove();
+    // delete task
+    img.onclick = function () {
+        li.remove();
     };
 }
